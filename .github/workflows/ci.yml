@@ -7,7 +7,6 @@ on:
     branches: [main]
 
 jobs:
-  # 🧪 Runs only during Pull Requests
   test:
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
@@ -20,10 +19,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Run security audit
+        run: npm audit --audit-level=high
 
-  # 🚀 Runs only after merge (push to main)
+      - name: Check code formatting with Prettier and fix
+        run: npm run format:fix
+
+      - name: Run tests and check coverage
+        run: npm run test:coverage
+
+      - name: Run linting and fix
+        run: npm run lint:fix
+
   ready-for-production:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
@@ -33,6 +40,3 @@ jobs:
           echo "✅ All tests passed successfully!"
           echo "🚀 The code has been merged into MAIN."
           echo "🌐 The project is now ready for the next stage: production deployment!"
-
-
-
