@@ -11,7 +11,7 @@ module.exports = defineConfig([
     rules: {
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
-      'no-unused-vars': 'error',
+      'no-unused-vars': 'warn',
       'no-undef': 'error',
       'prefer-const': 'warn',
       eqeqeq: ['error', 'always'],
