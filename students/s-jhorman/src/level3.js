@@ -13,13 +13,17 @@ function calculator(expression) {
     '-': (x, y) => x - y,
     '*': (x, y) => x * y,
     '/': (x, y) => {
-      if (y === 0) {throw new Error('Division by zero');}
+      if (y === 0) {
+        throw new Error('Division by zero');
+      }
       return x / y;
     },
   };
 
   const operation = operations[operator];
-  if (!operation) {throw new Error('Invalid operator');}
+  if (!operation) {
+    throw new Error('Invalid operator');
+  }
 
   return operation(a, b);
 }
