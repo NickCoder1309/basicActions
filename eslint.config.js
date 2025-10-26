@@ -7,9 +7,14 @@ module.exports = defineConfig([
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-    },
-    env: {
-      node: true,
+
+      globals: {
+        module: 'readonly',
+        require: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+        console: 'readonly',
+      },
     },
     rules: {
       semi: ['error', 'always'],
