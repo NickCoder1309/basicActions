@@ -12,8 +12,8 @@ function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
     let result = '';
 
-    if (i % 3 === 0) result += 'Fizz';
-    if (i % 5 === 0) result += 'Buzz';
+    if (i % 3 === 0) { result += 'Fizz'; }
+    if (i % 5 === 0) { result += 'Buzz'; }
 
     output.push(result || i.toString());
   }
@@ -23,12 +23,11 @@ function fizzBuzz(n) {
 
 function isIsogram(word) {
   const str = word.toLowerCase();
-  let len = str.length;
-  let arr = str.split('').sort();
+  const len = str.length;
+  const arr = str.split('').sort();
 
   for (let i = 0; i < len - 1; i++) {
-    if (arr[i] === arr[i + 1])
-      return false;
+    if (arr[i] === arr[i + 1]) { return false; }
   }
 
   return true;
