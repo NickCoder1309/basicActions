@@ -1,4 +1,9 @@
-const { calculator, isValidPassword, factorial, findDuplicates } = require('../src/level3');
+const {
+  calculator,
+  isValidPassword,
+  factorial,
+  findDuplicates,
+} = require('../src/level3');
 
 describe('Level 3 – Algorithms and Metrics', () => {
   // -----------------------------
@@ -36,11 +41,17 @@ describe('Level 3 – Algorithms and Metrics', () => {
 
   // -----------------------------
   test('findDuplicates: should return repeated words in text', () => {
-    expect(findDuplicates("la vaca canta la vaca salta")).toEqual(["la", "vaca"]);
-    expect(findDuplicates("uno dos tres cuatro")).toEqual([]);
-    expect(findDuplicates("hola hola hola mundo mundo")).toEqual(["hola", "mundo"]);
-    expect(findDuplicates("hola")).toEqual([]);
-    expect(findDuplicates("sol luna sol")).toEqual(["sol"]);
-    expect(findDuplicates("Perro perro Gato gato")).toEqual([]);
+    expect(findDuplicates('la vaca canta la vaca salta')).toEqual([
+      'la',
+      'vaca',
+    ]);
+    expect(findDuplicates('uno dos tres cuatro')).toEqual([]);
+    expect(findDuplicates('hola hola hola mundo mundo')).toEqual([
+      'hola',
+      'mundo',
+    ]);
+    expect(findDuplicates('hola')).toEqual([]);
+    expect(findDuplicates('sol luna sol')).toEqual(['sol']);
+    expect(findDuplicates('Perro perro Gato gato')).toEqual([]);
   });
 });

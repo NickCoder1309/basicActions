@@ -2,7 +2,7 @@ function textToTitleCase(text) {
   return text
     .toLowerCase()
     .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
 
@@ -12,8 +12,12 @@ function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
     let result = '';
 
-    if (i % 3 === 0) { result += 'Fizz'; }
-    if (i % 5 === 0) { result += 'Buzz'; }
+    if (i % 3 === 0) {
+      result += 'Fizz';
+    }
+    if (i % 5 === 0) {
+      result += 'Buzz';
+    }
 
     output.push(result || i.toString());
   }
@@ -27,7 +31,9 @@ function isIsogram(word) {
   const arr = str.split('').sort();
 
   for (let i = 0; i < len - 1; i++) {
-    if (arr[i] === arr[i + 1]) { return false; }
+    if (arr[i] === arr[i + 1]) {
+      return false;
+    }
   }
 
   return true;
@@ -52,4 +58,10 @@ function isValidEmail(text) {
   return emailRegex.test(text);
 }
 
-module.exports = { textToTitleCase, fizzBuzz, isIsogram, uniqueWordFinder, isValidEmail };
+module.exports = {
+  textToTitleCase,
+  fizzBuzz,
+  isIsogram,
+  uniqueWordFinder,
+  isValidEmail,
+};
