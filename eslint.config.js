@@ -8,6 +8,9 @@ module.exports = defineConfig([
       ecmaVersion: 2021,
       sourceType: 'module',
     },
+    env: {
+      node: true,
+    },
     rules: {
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
