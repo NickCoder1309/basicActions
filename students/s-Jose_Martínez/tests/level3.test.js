@@ -3,6 +3,7 @@ const {
   isValidPassword,
   factorial,
   findDuplicates,
+  fibonacci,
 } = require('../src/level3');
 
 describe('Level 3 – Algorithms and Metrics', () => {
@@ -44,5 +45,14 @@ describe('Level 3 – Algorithms and Metrics', () => {
     expect(findDuplicates('hello world')).toEqual([]);
     expect(findDuplicates('test test test')).toEqual(['test']);
     expect(findDuplicates('Hello hello HELLO')).toEqual([]);
+  });
+
+  // -----------------------------
+  test('fibonacci: should generate Fibonacci sequence', () => {
+    expect(fibonacci(0)).toEqual([]);
+    expect(fibonacci(1)).toEqual([0]);
+    expect(fibonacci(5)).toEqual([0, 1, 1, 2, 3]);
+    expect(fibonacci(8)).toEqual([0, 1, 1, 2, 3, 5, 8, 13]);
+    expect(fibonacci(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
   });
 });

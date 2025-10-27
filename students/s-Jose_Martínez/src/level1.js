@@ -24,5 +24,13 @@ function countVowels(text) {
   return vowels ? vowels.length : 0;
 }
 
+// --- Function 4 ---
+function reverseString(text) {
+  if (typeof text !== 'string') {
+    throw new Error('Input must be a string');
+  }
+  return text.split('').reverse().join('');
+}
+
 // Export so Jest can use them
-module.exports = { isPalindrome, sumArray, countVowels };
+module.exports = { isPalindrome, sumArray, countVowels, reverseString };
