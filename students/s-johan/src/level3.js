@@ -1,7 +1,6 @@
 
-// Function 1
-// Simple Calculator: takes a string expression with two operands and an operator,
-//  and returns the result
+// --- Function 1 ---
+// Simple calculator that performs basic arithmetic operations
 function calculator(expression) {
   const parts = expression.trim().split(' ');
   const operator = parts[0];
@@ -24,7 +23,6 @@ function calculator(expression) {
     },
   };
 
-
   const operation = operations[operator];
   if (!operation) {
     throw new Error('Invalid operator');
@@ -32,19 +30,16 @@ function calculator(expression) {
 
   return operation(a, b);
 }
-
-// Function 2
-// Password Validator: takes a string and returns true if it meets password criteria,
-//  false otherwise
+// --- Function 2 ---
+// Validate password strength
 function isValidPassword(text) {
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 
   return passwordRegex.test(text);
 }
 
-
-// Function 3
-// Factorial: takes a non-negative integer and returns its factorial
+// --- Function 3 ---
+// Calculate factorial of a number
 function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
@@ -53,9 +48,8 @@ function factorial(n) {
   }
 }
 
-
-// Function 4
-// Find Duplicates: takes a string of text and returns an array of duplicate words
+// --- Function 4 ---
+// Find duplicate words in a string
 function findDuplicates(text) {
   const words = text.split(' ');
   const wordCounts = new Map();
@@ -74,4 +68,5 @@ function findDuplicates(text) {
   return duplicates;
 }
 
+// Export so Jest can use them
 module.exports = { calculator, isValidPassword, factorial, findDuplicates };

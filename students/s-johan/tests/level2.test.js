@@ -1,11 +1,10 @@
-// Tests for Level 2 functions
-
 const {
   textToTitleCase,
   fizzBuzz,
   isIsogram,
   uniqueWordFinder,
   isValidEmail,
+  mostFrequentWords,
 } = require('../src/level2');
 
 describe('Level 2 – Logic and Conditions', () => {
@@ -59,5 +58,14 @@ describe('Level 2 – Logic and Conditions', () => {
     expect(isValidEmail('user@domain')).toBe(false);
     expect(isValidEmail('invalid@@mail.com')).toBe(false);
     expect(isValidEmail('noatsymbol.com')).toBe(false);
+  });
+
+  // -----------------------------
+  test('mostFrequentWords: should return the most frequent word(s) case-insensitively', () => {
+    expect(mostFrequentWords('la vaca la vaca toro')).toEqual(['la', 'vaca']);
+    expect(mostFrequentWords('uno dos tres uno uno')).toEqual(['uno']);
+    expect(mostFrequentWords('Apple apple banana Banana')).toEqual(['apple', 'banana']);
+    expect(mostFrequentWords('')).toEqual([]);
+    expect(mostFrequentWords(123)).toEqual([]);
   });
 });

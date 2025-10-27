@@ -1,5 +1,3 @@
-// Tests for Level 3 functions
-
 const {
   calculator,
   isValidPassword,
