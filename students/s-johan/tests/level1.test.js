@@ -1,6 +1,3 @@
-// Tests for Level 1 functions
-
-
 const { isPalindrome, sumArray, countVowels } = require('../src/level1');
 
 describe('Level 1 – Basic Functions', () => {
