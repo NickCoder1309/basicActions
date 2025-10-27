@@ -13,7 +13,7 @@ describe('Level 1 – Basic Functions', () => {
     expect(sumArray([10, 20, 30])).toBe(60);
     expect(sumArray([0, 0, 0])).toBe(0);
     expect(sumArray([100, -50, 25])).toBe(75);
-    expect(() => sumArray([1, 'a', 3])).toThrow('Array must contain only numbers');
+    expect(() => sumArray('not array')).toThrow('Input must be an array');
   });
 
   // -----------------------------
@@ -23,9 +23,5 @@ describe('Level 1 – Basic Functions', () => {
     expect(countVowels('Programming')).toBe(3);
     expect(() => countVowels(42)).toThrow('Input must be a string');
   });
-  test('findLargestNum: additional cases', () => {
-  expect(findLargestNum([1, 2, 3, 4, 5])).toBe(5);
-  expect(findLargestNum([100, 50, 200, 150])).toBe(200);
-  expect(() => findLargestNum([])).toThrow('Array must have at least one element');
-});
+
 });

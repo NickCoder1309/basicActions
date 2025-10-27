@@ -23,12 +23,7 @@ function countVowels(text) {
   const vowels = text.match(/[aeiou]/gi);
   return vowels ? vowels.length : 0;
 }
-function findLargestNum(nums) {
-  if (nums.length === 0) {
-    throw new Error('Array must have at least one element');
-  }
-  return nums.reduce((max, num) => (num > max ? num : max));
-}
+
 
 // Export so Jest can use them
-module.exports = { isPalindrome, sumArray, countVowels,findLargestNum};
+module.exports = { isPalindrome, sumArray, countVowels};

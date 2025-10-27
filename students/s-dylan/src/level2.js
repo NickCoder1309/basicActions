@@ -58,10 +58,18 @@ function isValidEmail(text) {
   return emailRegex.test(text);
 }
 
+function reverseWords(text) {
+  return text
+    .split(' ')
+    .map(word => word.split('').reverse().join(''))
+    .join(' ');
+}
+
 module.exports = {
   textToTitleCase,
   fizzBuzz,
   isIsogram,
   uniqueWordFinder,
   isValidEmail,
+  reverseWords,
 };
