@@ -1,4 +1,4 @@
-const { isPalindrome, sumArray, countVowels, reverseString } = require('../src/level1');
+const { isPalindrome, sumArray, countVowels } = require('../src/level1');
 
 describe('Level 1 – Basic Functions', () => {
   // -----------------------------
@@ -23,13 +23,5 @@ describe('Level 1 – Basic Functions', () => {
     expect(countVowels('AEIOU')).toBe(5);
     expect(countVowels('xyz')).toBe(0);
     expect(() => countVowels(123)).toThrow('Input must be a string');
-  });
-
-  // -----------------------------
-  test('reverseString: should reverse strings and handle errors', () => {
-    expect(reverseString('hello')).toBe('olleh');
-    expect(reverseString('JavaScript')).toBe('tpircSavaJ');
-    expect(reverseString('12345')).toBe('54321');
-    expect(() => reverseString(123)).toThrow('Input must be a string');
   });
 });

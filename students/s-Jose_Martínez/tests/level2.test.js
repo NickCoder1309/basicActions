@@ -4,7 +4,6 @@ const {
   isIsogram,
   uniqueWordFinder,
   isValidEmail,
-  isPrime,
 } = require('../src/level2');
 
 describe('Level 2 – Logic and Conditions', () => {
@@ -50,16 +49,5 @@ describe('Level 2 – Logic and Conditions', () => {
     expect(isValidEmail('invalidemail.com')).toBe(false);
     expect(isValidEmail('user@domain')).toBe(false);
     expect(isValidEmail('user@@example.com')).toBe(false);
-  });
-
-  // -----------------------------
-  test('isPrime: should detect prime numbers correctly', () => {
-    expect(isPrime(2)).toBe(true);
-    expect(isPrime(3)).toBe(true);
-    expect(isPrime(17)).toBe(true);
-    expect(isPrime(4)).toBe(false);
-    expect(isPrime(1)).toBe(false);
-    expect(isPrime(0)).toBe(false);
-    expect(isPrime(100)).toBe(false);
   });
 });

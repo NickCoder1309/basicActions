@@ -60,4 +60,22 @@ function findDuplicates(text) {
   return duplicates;
 }
 
-module.exports = { calculator, isValidPassword, factorial, findDuplicates };
+function firstNonRepeatingChar(str) {
+  if (!str) return null;
+  const freq = new Map();
+  for (const ch of str) {
+    freq.set(ch, (freq.get(ch) || 0) + 1);
+  }
+  for (const ch of str) {
+    if (freq.get(ch) === 1) return ch;
+  }
+  return null;
+}
+
+module.exports = {
+  calculator,
+  isValidPassword,
+  factorial,
+  findDuplicates,
+  firstNonRepeatingChar,
+};
