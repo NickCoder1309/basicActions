@@ -7,7 +7,7 @@ describe('Level 1 – Basic Functions', () => {
     expect(() => isPalindrome(123)).toThrow('Input must be a string');
   });
 
-  // -----------------------------
+  // ----------------------------
   test('sumArray: should handle single-element and invalid input', () => {
     expect(sumArray([5])).toBe(5);
     expect(() => sumArray('not array')).toThrow('Input must be an array');
