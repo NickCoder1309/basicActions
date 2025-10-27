@@ -28,7 +28,7 @@ describe('Level 1 – Basic Functions', () => {
   test('findLargestNum: should handle an empty array and negative numbers', () => {
     expect(findLargestNum([-2, -6, -1, -1])).toBe(-1);
     expect(() => findLargestNum([])).toThrow(
-      'Array must have at least one element'
+      'Array must have at least one element.'
     );
   });
 });

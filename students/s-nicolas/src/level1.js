@@ -26,7 +26,7 @@ function countVowels(text) {
 
 function findLargestNum(nums) {
   if (nums.length === 0) {
-    throw new Error('Array must have at least one element');
+    throw new Error('Array must have at least one element.');
   }
   return nums.reduce((max, num) => (num > max ? num : max));
 }
